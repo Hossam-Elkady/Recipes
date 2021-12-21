@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+body {
+    background-color: #fefbf0;
+}
+
+* {
+    font-family: "Ubuntu", sans-serif;
+}
+
+section {
+    min-height: 84.7vh;
+}
+::-webkit-scrollbar-track {
+    background: #ffa18a;
+}
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 5px 3px 5px #943C25,
+    inset -5px -3px 5px #943C25;
+    // background: #943C25;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #e65c3a;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}

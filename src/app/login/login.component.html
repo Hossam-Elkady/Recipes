@@ -1,0 +1,39 @@
+<section class="container py-2">
+    <h1 class="mt-5 ">Login</h1>
+    <form [formGroup]="loginForm" class="py-5" (ngSubmit)="submit()">
+        <div class="my-3">
+            <label class="my-2 ">Email</label>
+            <input type="email" class="form-control" placeholder="Enter your Email" formControlName="email">
+            <div class="errors" *ngIf="loginForm.controls['email'].invalid&&loginForm.controls['email'].touched">
+                <p class=" my-2" *ngIf="loginForm.controls['email'].errors?.['email']">enter valid email</p>
+                <p class=" my-2" *ngIf="loginForm.controls['email'].errors?.['required']">email is required</p>
+            </div>
+        </div>
+        <div class="my-3">
+            <label class="my-2 ">Password</label>
+            <input type="password" class="form-control" placeholder="Enter your Password" formControlName="password">
+            <div class="errors"
+                *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid">
+                <p class=" my-2" *ngIf="loginForm.controls['password'].errors?.['required']">enter valid password</p>
+                <p class=" my-2" *ngIf="loginForm.controls['password'].errors?.['minlength']">password minimum length is
+                    5 </p>
+                <p class=" my-2" *ngIf="loginForm.controls['password'].errors?.['maxlength']">password maximum length is
+                    20</p>
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <button [disabled]="loginForm.invalid" class="submit mt-1 btn text-white">
+                Submit <span *ngIf="loading"> <i class="fas fa-circle-notch fa-spin"></i></span></button>
+        </div>
+        <p class=" mt-3 text-capitalize" *ngIf="registered">{{message}}</p>
+        <p class="text-center mt-5 m-auto">New Here? <a class="text-primary" routerLink="/register"> Register
+                Now</a>
+        </p>
+    </form>
+    <div class="m-auto testing p-3">
+        <h1 class="text-center">For Testing</h1>
+        <hr>
+        <h3 class="my-3">Email: test@site.test</h3>
+        <h3 >Password: TestSite</h3>
+    </div>
+</section>

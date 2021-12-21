@@ -1,0 +1,9 @@
+.btn {
+    background-color: #943c25;
+    &:focus {
+        box-shadow: none !important;
+    }
+    &:hover {
+        background-color: #a83d23;
+    }
+}

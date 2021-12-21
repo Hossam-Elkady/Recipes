@@ -1,0 +1,23 @@
+<section class="py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 my-3" *ngFor="let res of response; let i = index">
+                <div class="shadow-lg rounded position-relative" [ngClass]=" i % 2 ? 'even' : 'odd' ">
+                    <ngx-spinner bdColor="rgba(0,0,0,1)" size="large" color="#f9f6eb" type="ball-climbing-dot"
+                        [fullScreen]="false">
+                        <p style="color: white" class="mt-5 pt-5"> We Know You are Hungry ... </p>
+                    </ngx-spinner>
+                    <div style="overflow: hidden;" class="m-0 p-0">
+                        <img [src]="res.image_url" routerLink="/details/{{res.recipe_id}}" class="mb-3"
+                                [alt]="res.title">
+                    </div>
+                    <h4 class="px-3">{{res.title}}</h4>
+                    <i class="fas fa-star" (click)="starRecipe(i)"></i>
+                    <div class="bg-light d-none"  [ngClass]=" i % 2 ? 'odd' : 'even' ">
+                        <p class=" text-white "> Please Login First to add Recipes to Favourites</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

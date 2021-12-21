@@ -1,0 +1,15 @@
+.btn {
+    background-color: #943c25;
+    &:focus {
+        box-shadow: none !important;
+    }
+    &:hover {
+        background-color: #a83d23;
+    }
+}.testing{
+    width: fit-content;
+    border: 1px solid #943C25;
+}
+section{
+    overflow: hidden;
+}

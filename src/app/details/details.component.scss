@@ -1,0 +1,42 @@
+img {
+    object-fit: cover;
+    min-width: 50%;
+    max-width: 75%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+button.btn1 {
+    background-color: #943c25 !important;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    &:hover {
+        background-color: #a53d23 !important;
+    }
+}
+
+span {
+    color: #a53d23;
+}
+
+ol {
+    list-style: decimal;
+}
+
+.btn {
+    box-shadow: none !important;
+}
+
+button.btn2 {
+    background-color: #5a5625 !important;
+    &:hover {
+        box-shadow: none !important;
+        background-color: #69642b !important;
+    }
+}

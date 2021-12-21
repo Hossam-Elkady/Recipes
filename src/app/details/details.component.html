@@ -1,0 +1,35 @@
+<section class="py-5">
+    <div class="container rounded">
+        <h1 class="mb-5">{{data.recipe.title}}</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img [src]="data.recipe.image_url" [alt]="data.recipe.title">
+                <h3 class="my-5">Publisher Name: <span>{{data.recipe.publisher}}</span></h3>
+                <h4>Popularity:
+                    <p class="text-reset d-inline">{{data.recipe.social_rank}}</p>
+                </h4>
+                <div class="mt-5 ">
+                    <a [href]="data.recipe.publisher_url" target="_blank" class="mt-5 me-2"><button
+                            class="btn1  btn rounded text-white">Publisher URL</button></a>
+                    <a [href]="data.recipe.source_url" target="_blank" class="mt-5"><button
+                            class="rounded btn btn2 text-white">Source URL</button></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <h5>Ingredients: </h5>
+                    <ol class="d-flex flex-column">
+                        <li *ngFor="let ingredient of ingredient">
+                            {{ingredient}}
+                            <br>
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<ngx-spinner bdColor="rgba(0,0,0,1)" size="large" color="#f9f6eb" type="ball-climbing-dot" [fullScreen]="false">
+    <p style="color: white" class="mt-5 pt-5"> We Know You are Hungry ... </p>
+</ngx-spinner>
